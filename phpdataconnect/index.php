@@ -18,10 +18,10 @@
 
     <br>
     <form action="islem.php" method="POST">
-      <input type="text" required="" name="bilgilerim_ad" placeholder="Adınızı Giriniz.."></input><br><br>
-      <input type="text" required="" name="bilgilerim_soyad" placeholder="Soyadnızı Giriniz.."></input><br><br>
-      <input type="email" required="" name="bilgilerim_mail" placeholder="Mailinizi Giriniz.."></input><br><br>
-      <input type="text" required="" name="bilgilerim_yas" placeholder="Yaşınızı Giriniz.."></input><br><br>
+      <input type="text" required="" name="bilgilerim_ad" placeholder="Adınızı Giriniz.."><br><br>
+      <input type="text" required="" name="bilgilerim_soyad" placeholder="Soyadnızı Giriniz.."><br><br>
+      <input type="email" required="" name="bilgilerim_mail" placeholder="Mailinizi Giriniz.."><br><br>
+      <input type="text" required="" name="bilgilerim_yas" placeholder="Yaşınızı Giriniz.."><br><br>
 
 
       <button type="submit" name="insertislem">Gönder</button>
