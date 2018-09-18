@@ -1,5 +1,4 @@
 <?php require_once 'connect.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,23 +19,24 @@
 
     <br>
     <form action="islem.php" method="POST">
-      <input type="text" required="" name="bilgilerim_ad" placeholder="Adınızı Giriniz.."><br><br>
-      <input type="text" required="" name="bilgilerim_soyad" placeholder="Soyadnızı Giriniz.."><br><br>
-      <input type="email" required="" name="bilgilerim_mail" placeholder="Mailinizi Giriniz.."><br><br>
-      <input type="text" required="" name="bilgilerim_yas" placeholder="Yaşınızı Giriniz.."><br><br>
+      <input type="text" required="" name="bilgilerim_ad" placeholder="Adınızı Giriniz.."></input><br><br>
+      <input type="text" required="" name="bilgilerim_soyad" placeholder="Soyadnızı Giriniz.."></input><br><br>
+      <input type="email" required="" name="bilgilerim_mail" placeholder="Mailinizi Giriniz.."></input><br><br>
+      <input type="text" required="" name="bilgilerim_yas" placeholder="Yaşınızı Giriniz.."></input><br><br>
 
 
       <button type="submit" name="insertislem">Gönder</button>
     </form>
 
-    <h2>Kayıtların Listelenmesi</h2>
+    <h4>Kayıtların Listelenmesi</h4>
 
 
     <?php
     $kayitcek=$db->prepare("SELECT * from bilgilerim");
     $kayitcek->execute();
-    $datalar=$kayitcek->fetch(PDO::FETCH_ASSOC);
-    print_r($kayitcek);
+    while($bilgiler=$kayitcek->fetch(PDO::FETCH_ASSOC)){
+      echo $bilgiler['bilgilerim_ad'];echo '<hr>';
+    }
 
     ?>
 
